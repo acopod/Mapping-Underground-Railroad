@@ -1,6 +1,6 @@
 var config = {
-    style: 'mapbox://styles/acopod/cl9rz3rjj000s14qja3ea4y1x',
-    accessToken: 'pk.eyJ1IjoiYWNvcG9kIiwiYSI6ImNsOXI4NHEzZTBkbWU0MHFtZGJuaGZkYWMifQ.sZmqyas3S7qPVHJO032xuA',
+    style: 'mapbox://styles/acopod/cl9ugor6c002314qj6d9nxamy',
+    accessToken: 'pk.eyJ1IjoiYWNvcG9kIiwiYSI6ImNsOHg1OG5ybjAxajIzb2s0OGgzbmIxbDAifQ.hdscZl9C1nd35pLqEB1xsg',
     showMarkers: true,
     markerColor: '#3FB1CE',
     projection: 'equirectangular',
@@ -8,19 +8,19 @@ var config = {
     //https://docs.mapbox.com/mapbox-gl-js/example/projections/
     inset: true,
     theme: 'dark',
-    use3dTerrain: false, //set true for enabling 3D maps.
-    title: 'Public and Affordable Housing Flood Risk',
-    subtitle: 'Do you still want to put your asset near waterfront after Hurricane Sandy?',
-    byline: 'By a Digital Storyteller',
+    use3dTerrain: true, //set true for enabling 3D maps.
+    title: 'William Simms - Freedom Route',
+    subtitle: 'The Map of William Simms’ Journey',
+    //byline: 'By ',
     footer: 'Source: source citations, etc. <br> Created using <a href="https://github.com/mapbox/storytelling" target="_blank">Mapbox Storytelling</a> template.',
     chapters: [
             {
             id: 'slug-style-id',
             alignment: 'left',
-            hidden: true,
+            hidden: false,
             title: 'Introduction',
-            image: 'images/Water1-superJumbo.jpg',
-            description: 'In the fall of 2012, New York City was hit with hurricane that left tens of thousands of public housing residents <a href = "https://www1.nyc.gov/site/nycha/about/press/pr-2012/nycha-has-restored-power-to-buildings-affected-by-hurricane-sandy.page">without power for days or even weeks</a>. New York City Housing Authority public housing developments were affected. <a href="https://furmancenter.org/files/publications/SandysEffectsOnHousingInNYC.pdf">24,000 government-subsidized apartments and 40,000 rent-stabilized apartments were also affected. With rising sea levels from climate change and the <a href="https://www.nytimes.com/2017/04/18/magazine/when-rising-seas-transform-risk-into-certainty.html">promise</a> of more flooding, which areas and <i>who</i> will likely be most affected? How is affordable housing construction responding to this? </p>',
+            //image: 'images/Water1-superJumbo.jpg',
+            description: '',
             location: {
                 center: [-76.84464, 40.81432],
 zoom: 6.35,
@@ -49,14 +49,47 @@ bearing: 0.00
             id: 'second-identifier',
             alignment: 'right',
             hidden: false,
-            title: 'Points of Rock',
-            image: 'images/2362.webp',
-            description: 'The city classifies Red Hook Houses as being in flood zone 1, indicating high flood risk. During Hurricane Sandy in 2012, the development was inundated with 6 feet (1.8 m) of flood water through sewer overflow and high tides.[16][2][17] The storm left residents without power and fresh water for months. This caused leaks, resulting in mold that affected many residents health. Prior to Sandy, various city reports outlined the need for increased flood protection projecting floods as high as 5 feet during storm surges yet NYCHA officials did not anticipate storm surges being that strong.',
+            title: 'Chestnut Hill',
+            image: 'images/ChestnutHill.jpg',
+            description: 'Three farms - Chestnut Hill, Eagles’ Rest just below this, and a third farm near Alexandria, VA. The owner was Mrs. MASON (she was a PRICE). These farms formerly owned by an Englishman named CHAPHAM, who was humane, believed in treating slaves like men. Didn’t whip, etc. On this account the slaves on the Chestnut Hill farm would talk back at the overseer and wouldn’t submit quietly to being ill-treated. When CHAPHAM died, he left the three farms and the slaves to a distant relative, Mrs. MASON, who lived in Alexandria and whose husband was a lawyer there. The three farms were looked after by an overseer. The slaves of Chestnut Hill, when whipped by the overseer, would fight back and sometimes whip the overseer. “Very troublesome.” The slaves would not submit to harshness, having had a taste of good treatment under CHAPHAM’s mild rule. Many of the slaves at Chestnut Hill had already run away so that only seven were finally left on the farm, and man slaves were brought up from Eagle’s Rest at various times to help work the upper farm.',
             location: {
-                    center: [-77.53627, 39.27532],
-                    zoom: 12.58,
-                    pitch: 60,
-                    bearing: 0.00,
+                    center: [-77.53852, 39.24846],
+zoom: 16.47,
+pitch: 70.00,
+bearing: 0.00,
+                    speed: 0.5,
+                    curve: 1,
+                // flyTo additional controls-
+                // These options control the flight curve, making it move
+                // slowly and zoom out almost completely before starting
+                // to pan.
+                //speed: 2, // make the flying slow
+                //curve: 1, // change the speed at which it zooms out
+                        },
+            mapAnimation: 'flyTo',
+            rotateAnimation: true,
+            callback: '',
+            onChapterEnter: [    
+                    {
+                     layer: 'pluto-hous-type',
+                     opacity: 1,
+                     duration: 5000
+                    }
+                 ],
+            onChapterExit: []
+        },
+                {
+            id: 'second-identifier-1',
+            alignment: 'right',
+            hidden: false,
+            title: 'Point of Rocks',
+            //image: 'images/ChestnutHill.jpg',
+            description: 'Three farms - Chestnut Hill, Eagles’ Rest just below this, and a third farm near Alexandria, VA. The owner was Mrs. MASON (she was a PRICE). These farms formerly owned by an Englishman named CHAPHAM, who was humane, believed in treating slaves like men. Didn’t whip, etc. On this account the slaves on the Chestnut Hill farm would talk back at the overseer and wouldn’t submit quietly to being ill-treated. When CHAPHAM died, he left the three farms and the slaves to a distant relative, Mrs. MASON, who lived in Alexandria and whose husband was a lawyer there. The three farms were looked after by an overseer. The slaves of Chestnut Hill, when whipped by the overseer, would fight back and sometimes whip the overseer. “Very troublesome.” The slaves would not submit to harshness, having had a taste of good treatment under CHAPHAM’s mild rule. Many of the slaves at Chestnut Hill had already run away so that only seven were finally left on the farm, and man slaves were brought up from Eagle’s Rest at various times to help work the upper farm.',
+            location: {
+center: [-77.53585, 39.27480],
+zoom: 15,
+pitch: 60.00,
+bearing: 0.00,
                     speed: 0.5,
                     curve: 1,
                 // flyTo additional controls-
@@ -83,92 +116,200 @@ bearing: 0.00
             alignment: 'left',
             hidden: false,
             title: 'Chambersburg',
-            image: 'images/source.png',
+            //image: 'images/source.png',
             description: 'Copy these sections to add to your story.',
             location: {
 center: [-77.66071, 39.94729],
-zoom: 10.68,
-pitch: 0.00,
-bearing: 0.00
+zoom: 14,
+pitch: 45,
+bearing: 0.00,
+                    speed: 0.5,
+                    curve: 1,
             },
             mapAnimation: 'flyTo',
-            rotateAnimation: false,
+            rotateAnimation: true,
             callback: '',
             onChapterEnter: [],
             onChapterExit: []
         },
         {
             id: 'fourth-chapter',
-            alignment: 'fully',
+            alignment: 'right',
             hidden: false,
-            title: 'Third Title',
-            image: 'images/source.png',
+            title: 'Carlisle',
+            //image: 'images/source.png',
             description: 'Copy these sections to add to your story.',
             location: {
                 center: [-77.18563, 40.20027],
-zoom: 10.70,
-pitch: 0.00,
-bearing: 0.00
-            },
-            mapAnimation: 'flyTo',
-            rotateAnimation: false,
-            callback: '',
-            onChapterEnter: [],
-            onChapterExit: []
-        },
-                {
-            id: 'fourth-chapter',
-            alignment: 'fully',
-            hidden: false,
-            title: 'Carlisle',
-            image: 'images/source.png',
-            description: 'Copy these sections to add to your story.',
-            location: {
-                center: [-77.18563, 40.20027],
-zoom: 10.70,
-pitch: 0.00,
-bearing: 0.00
-            },
-            mapAnimation: 'flyTo',
-            rotateAnimation: false,
-            callback: '',
-            onChapterEnter: [],
-            onChapterExit: []
-        },
-        {
-            id: 'fifth-chapter',
-            alignment: 'fully',
-            hidden: false,
-            title: 'Carlisle',
-            image: 'images/source.png',
-            description: 'Copy these sections to add to your story.',
-            location: {
-                center: [-77.18937, 40.20227],
-zoom: 13.84,
+zoom: 14,
 pitch: 45.00,
-bearing: 0.00
+bearing: 0.00,                    
+speed: 0.5,
+                    curve: 1,
             },
             mapAnimation: 'flyTo',
-            rotateAnimation: false,
+            rotateAnimation: true,
             callback: '',
             onChapterEnter: [],
             onChapterExit: []
         },
+
                 {
-            id: 'six-chapter',
-            alignment: 'fully',
+            id: 'fifth-chapter',
+            alignment: 'left',
             hidden: false,
             title: 'Harrisburg',
-            image: 'images/source.png',
+            //image: 'images/source.png',
             description: 'Copy these sections to add to your story.',
             location: {
               center: [-76.88663, 40.26688],
 zoom: 13.37,
 pitch: 45.00,   
-bearing: 0.00
+bearing: 0.00,
+speed: 0.5,
+                    curve: 1,
+
             },
             mapAnimation: 'flyTo',
-            rotateAnimation: false,
+            rotateAnimation: true,
+            callback: '',
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+
+        {
+            id: 'sixth-chapter',
+            alignment: 'left',
+            hidden: false,
+            title: 'Millersburg',
+            //image: 'images/source.png',
+            description: 'Copy these sections to add to your story.',
+            location: {
+center: [-76.96171, 40.54171],
+zoom: 14,
+pitch: 45.00,
+bearing: 0.00,
+speed: 0.5,
+                    curve: 1,
+
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: true,
+            callback: '',
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+
+        {
+            id: 'seventh-chapter',
+            alignment: 'left',
+            hidden: false,
+            title: 'Pottsville',
+            //image: 'images/source.png',
+            description: 'Copy these sections to add to your story.',
+            location: {
+center: [-76.19563, 40.68742],
+zoom: 14,
+pitch: 45.00,
+bearing: 0.00,
+speed: 0.5,
+                    curve: 1,
+
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: true,
+            callback: '',
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+
+        {
+            id: 'eighth-chapter',
+            alignment: 'left',
+            hidden: false,
+            title: 'Wilkes-Barre',
+            //image: 'images/source.png',
+            description: 'Copy these sections to add to your story.',
+            location: {
+center: [-75.88293, 41.24969],
+zoom: 14,
+pitch: 45.00,
+bearing: 0.00,
+speed: 0.5,
+                    curve: 1,
+
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: true,
+            callback: '',
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+
+        {
+            id: 'ninth-chapter',
+            alignment: 'left',
+            hidden: false,
+            title: 'Montrose',
+            //image: 'images/source.png',
+            description: 'Copy these sections to add to your story.',
+            location: {
+center: [-75.87886, 41.83541],
+zoom: 14,
+pitch: 45.00,
+bearing: 0.00,
+speed: 0.5,
+                    curve: 1,
+
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: true,
+            callback: '',
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+
+                {
+            id: 'tenth-chapter',
+            alignment: 'left',
+            hidden: false,
+            title: 'Binghamton',
+            //image: 'images/source.png',
+            description: 'Copy these sections to add to your story.',
+            location: {
+center: [-75.91424, 42.09846],
+zoom: 14,
+pitch: 45.00,
+bearing: 0.00,
+speed: 0.5,
+                    curve: 1,
+
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: true,
+            callback: '',
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+
+                        {
+            id: 'final-chapter',
+            alignment: 'left',
+            hidden: false,
+            title: 'Ithaca',
+            //image: 'images/source.png',
+            description: 'Copy these sections to add to your story.',
+            location: {
+center: [-76.49734, 42.44204],
+zoom: 12.87,
+pitch: 45.00,
+bearing: 0.00,
+speed: 0.5,
+                    curve: 1,
+
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: true,
             callback: '',
             onChapterEnter: [],
             onChapterExit: []
