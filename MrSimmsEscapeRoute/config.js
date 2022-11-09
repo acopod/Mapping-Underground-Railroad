@@ -295,7 +295,7 @@ speed: 0.5,
             description: 'Copy these sections to add to your story.',
             location: {
 center: [-76.593547, 40.634210],
-zoom: 14,
+zoom: 9,
 pitch: 45.00,
 bearing: 0.00,
 speed: 0.5,
