@@ -1,7 +1,7 @@
 var config = {
     style: 'mapbox://styles/acopod/cl9ugor6c002314qj6d9nxamy',
     accessToken: 'pk.eyJ1IjoiYWNvcG9kIiwiYSI6ImNsOHg1OG5ybjAxajIzb2s0OGgzbmIxbDAifQ.hdscZl9C1nd35pLqEB1xsg',
-    showMarkers: true,
+    showMarkers: false,
     markerColor: '#3FB1CE',
     projection: 'equirectangular',
     //Read more about available projections here
@@ -22,7 +22,7 @@ var config = {
             //image: 'images/Water1-superJumbo.jpg',
             description: '',
             location: {
-                center: [-76.84464, 40.81432],
+                center: [ -76.85630382708514, 41.14180696407619],
 zoom: 6.35,
 pitch: 0.00,
 bearing: 0.00
@@ -133,12 +133,12 @@ bearing: 0.00,
             onChapterExit: []
         },
         {
-            id: 'third-identifier',
+            id: 'third-identifier-1',
             alignment: 'left',
             hidden: false,
             title: 'Chambersburg',
             //image: 'images/source.png',
-            description: 'Copy these sections to add to your story.',
+            description: 'CHenry Watson, free black barber that haled slaves escape, was located in Chambersburg <br>  http://littlebitsofhistory.blogspot.com/2012/02/underground-railroad-activity-in.html <br>  It bordered Maryland, thus many slaves escaped through the town. They would often follow the Shenandoah Valley in Virginia to here. Some freedom seekers, not assisted by the UR, would follow the Appalachian mountains northward. https://franklincountypa.gov/index.php?section=archives_blog/little_africa',
             location: {
 center: [-77.66071, 39.94729],
 zoom: 14,
@@ -155,6 +155,27 @@ bearing: 0.00,
         },
         {
             id: 'fourth-chapter',
+            alignment: 'right',
+            hidden: false,
+            title: 'from Chambersburg to Carlisle',
+            image: 'images/from Chambersburg to Carlisle.png',
+            description: 'Copy these sections to add to your story.',
+            location: {
+                center: [-77.40446, 40.08453],
+zoom: 9.5,
+pitch: 45.00,
+bearing: 0.00,                    
+speed: 0.5,
+                    curve: 1,
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: true,
+            callback: '',
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        {
+            id: 'fourth-chapter-1',
             alignment: 'right',
             hidden: false,
             title: 'Carlisle',
@@ -179,15 +200,15 @@ speed: 0.5,
             id: 'fifth-chapter',
             alignment: 'left',
             hidden: false,
-            title: 'Harrisburg',
+            title: 'from Carlisle to Harrisburg',
             //image: 'images/source.png',
             description: 'Copy these sections to add to your story.',
             location: {
-              center: [-76.88663, 40.26688],
-zoom: 13.37,
+              center: [-77.01788, 40.20974],
+zoom: 10,
 pitch: 45.00,   
 bearing: 0.00,
-speed: 0.5,
+speed: 0.3,
                     curve: 1,
 
             },
@@ -198,8 +219,53 @@ speed: 0.5,
             onChapterExit: []
         },
 
-        {
+
+                {
+            id: 'fifth-chapter-1',
+            alignment: 'left',
+            hidden: false,
+            title: 'Harrisburg',
+            //image: 'images/source.png',
+            description: 'Copy these sections to add to your story.',
+            location: {
+              center: [-76.88663, 40.26688],
+zoom: 13.37,
+pitch: 45.00,   
+bearing: 0.00,
+speed: 0.3,
+                    curve: 1,
+
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: true,
+            callback: '',
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+            {
             id: 'sixth-chapter',
+            alignment: 'left',
+            hidden: false,
+            title: 'from Harrisburg to Millersburg',
+            //image: 'images/source.png',
+            description: 'Copy these sections to add to your story.',
+            location: {
+center: [-77.022177, 40.384463],
+zoom: 10,
+pitch: 45.00,
+bearing: 0.00,
+speed: 0.5,
+                    curve: 1,
+            },
+                        mapAnimation: 'flyTo',
+            rotateAnimation: true,
+            callback: '',
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+
+        {
+            id: 'sixth-chapter-1',
             alignment: 'left',
             hidden: false,
             title: 'Millersburg',
@@ -220,9 +286,31 @@ speed: 0.5,
             onChapterEnter: [],
             onChapterExit: []
         },
-
         {
             id: 'seventh-chapter',
+            alignment: 'left',
+            hidden: false,
+            title: 'from Millersburg to Pottsville',
+            //image: 'images/source.png',
+            description: 'Copy these sections to add to your story.',
+            location: {
+center: [-76.593547, 40.634210],
+zoom: 14,
+pitch: 45.00,
+bearing: 0.00,
+speed: 0.5,
+                    curve: 1,
+
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: true,
+            callback: '',
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+
+        {
+            id: 'seventh-chapter-1',
             alignment: 'left',
             hidden: false,
             title: 'Pottsville',
