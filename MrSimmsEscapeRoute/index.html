@@ -473,7 +473,7 @@ window.addEventListener('resize', scroller.resize);
 map.on('zoomend', function() {
   
   var zoom = map.getZoom();
-  if(zoom > 10){
+  if(zoom < 10){
       map.setStyle("mapbox://styles/acopod/cl9ugor6c002314qj6d9nxamy");
   }
 });
