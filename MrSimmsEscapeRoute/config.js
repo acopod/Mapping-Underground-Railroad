@@ -6,7 +6,7 @@ var config = {
     projection: 'equirectangular',
     //Read more about available projections here
     //https://docs.mapbox.com/mapbox-gl-js/example/projections/
-    inset: true,
+    inset: false,
     theme: 'dark',
     use3dTerrain: true, //set true for enabling 3D maps.
     title: 'William Simms - Freedom Route',
@@ -84,13 +84,13 @@ bearing: 0.00,
             hidden: false,
             title: 'Point of Rocks',
             //image: 'images/ChestnutHill.jpg',
-            description: 'Three farms - Chestnut Hill, Eagles’ Rest just below this, and a third farm near Alexandria, VA. The owner was Mrs. MASON (she was a PRICE). These farms formerly owned by an Englishman named CHAPHAM, who was humane, believed in treating slaves like men. Didn’t whip, etc. On this account the slaves on the Chestnut Hill farm would talk back at the overseer and wouldn’t submit quietly to being ill-treated. When CHAPHAM died, he left the three farms and the slaves to a distant relative, Mrs. MASON, who lived in Alexandria and whose husband was a lawyer there. The three farms were looked after by an overseer. The slaves of Chestnut Hill, when whipped by the overseer, would fight back and sometimes whip the overseer. “Very troublesome.” The slaves would not submit to harshness, having had a taste of good treatment under CHAPHAM’s mild rule. Many of the slaves at Chestnut Hill had already run away so that only seven were finally left on the farm, and man slaves were brought up from Eagle’s Rest at various times to help work the upper farm.',
+            description: '(Near Point of Rocks) Otho Thomas II farm, 5323 Tuscarora Road (Route 28) Point of Rocks African Methodist Episcopal Church, confirmed underground railroad site St. Paul’s Episcopal Church, unconfirmed Underground Railroad Site',
             location: {
 center: [-77.53585, 39.27480],
 zoom: 15,
 pitch: 60.00,
 bearing: 0.00,
-                    speed: 0.5,
+                    speed: 0.3,
                     curve: 1,
                 // flyTo additional controls-
                 // These options control the flight curve, making it move
@@ -109,6 +109,27 @@ bearing: 0.00,
                      duration: 5000
                     }
                  ],
+            onChapterExit: []
+        },
+                {
+            id: 'third-identifier',
+            alignment: 'left',
+            hidden: false,
+            title: 'from Point of Rocks to Chambersburg',
+            image: 'images/from Point of Rocks to Chambersburg.png',
+            description: 'Copy these sections to add to your story.',
+            location: {
+center: [-77.5590195524072, 39.62997995263127],
+zoom: 9,
+pitch: 45,
+bearing: 0.00,
+                    speed: 0.3,
+                    curve: 1,
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: true,
+            callback: '',
+            onChapterEnter: [],
             onChapterExit: []
         },
         {
