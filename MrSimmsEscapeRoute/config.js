@@ -9,7 +9,7 @@ var config = {
     inset: false,
     theme: 'dark',
     use3dTerrain: true, //set true for enabling 3D maps.
-    title: 'William Simms - Freedom Route',
+    title: 'William Simms’ Route to Freedom',
     subtitle: 'The Map of William Simms’ Journey',
     //byline: 'By ',
     footer: 'Source: source citations, etc. <br> Created using <a href="https://github.com/mapbox/storytelling" target="_blank">Mapbox Storytelling</a> template.',
@@ -332,8 +332,32 @@ speed: 0.5,
             onChapterExit: []
         },
 
-        {
+                {
             id: 'eighth-chapter',
+            alignment: 'left',
+            hidden: false,
+            title: 'from Pottsville to Wilkes-Barre',
+            //image: 'images/source.png',
+            description: 'Copy these sections to add to your story.',
+            location: {
+center: [-76.0048, 41.0240],
+zoom: 9,
+pitch: 45.00,
+bearing: 0.00,
+speed: 0.5,
+                    curve: 1,
+
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: true,
+            callback: '',
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+
+
+        {
+            id: 'eighth-chapter-1',
             alignment: 'left',
             hidden: false,
             title: 'Wilkes-Barre',
@@ -359,6 +383,29 @@ speed: 0.5,
             id: 'ninth-chapter',
             alignment: 'left',
             hidden: false,
+            title: 'from Wilkes-Barre to Montrose',
+            //image: 'images/source.png',
+            description: 'Copy these sections to add to your story.',
+            location: {
+center: [-75.946468, 41.538235],
+zoom: 9,
+pitch: 45.00,
+bearing: 0.00,
+speed: 0.5,
+                    curve: 1,
+
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: true,
+            callback: '',
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+
+        {
+            id: 'ninth-chapter-1',
+            alignment: 'left',
+            hidden: false,
             title: 'Montrose',
             //image: 'images/source.png',
             description: 'Copy these sections to add to your story.',
@@ -378,8 +425,32 @@ speed: 0.5,
             onChapterExit: []
         },
 
-                {
+                        {
             id: 'tenth-chapter',
+            alignment: 'left',
+            hidden: false,
+            title: 'from Montrose to Binghamton',
+            //image: 'images/source.png',
+            description: 'Copy these sections to add to your story.',
+            location: {
+center: [-75.956125, 41.966551],
+zoom: 10,
+pitch: 45.00,
+bearing: 0.00,
+speed: 0.5,
+                    curve: 1,
+
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: true,
+            callback: '',
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+
+
+                {
+            id: 'tenth-chapter-1',
             alignment: 'left',
             hidden: false,
             title: 'Binghamton',
@@ -400,9 +471,32 @@ speed: 0.5,
             onChapterEnter: [],
             onChapterExit: []
         },
+                                {
+            id: 'final-chapter',
+            alignment: 'left',
+            hidden: false,
+            title: 'from Binghamton to Ithaca',
+            //image: 'images/source.png',
+            description: 'Copy these sections to add to your story.',
+            location: {
+center: [-76.190849, 42.307595],
+zoom: 9,
+pitch: 45.00,
+bearing: 0.00,
+speed: 0.5,
+                    curve: 1,
+
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: true,
+            callback: '',
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+
 
                         {
-            id: 'final-chapter',
+            id: 'final-chapter-1',
             alignment: 'left',
             hidden: false,
             title: 'Ithaca',
