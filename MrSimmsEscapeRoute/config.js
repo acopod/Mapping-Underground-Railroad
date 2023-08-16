@@ -3,15 +3,18 @@ var config = {
     accessToken: 'pk.eyJ1IjoiYWNvcG9kIiwiYSI6ImNsOHg1OG5ybjAxajIzb2s0OGgzbmIxbDAifQ.hdscZl9C1nd35pLqEB1xsg',
     showMarkers: false,
     markerColor: '#3FB1CE',
-    projection: 'equirectangular',
+    projection: 'mercator',
     //Read more about available projections here
     //https://docs.mapbox.com/mapbox-gl-js/example/projections/
     inset: false,
-    theme: 'dark',
+    theme: 'light',
     use3dTerrain: true, //set true for enabling 3D maps.
     title: 'William Simms’ Route to Freedom',
-    subtitle: 'The Map of William Simms’ Journey',
-    //byline: 'By ',
+    subtitle1: 'The Map of William Simms’ Journey',
+    subtitle2: 'Designer: Tung Chen',
+    subtitle3: 'Assistant Designers: Halle Mae Livermore and Alycia Basquiat',
+
+    //byline: 'Map designer: ',
     footer: '<br> Created using <a href="https://github.com/mapbox/storytelling" target="_blank">Mapbox Storytelling</a> template.',
     chapters: [
             {
@@ -20,7 +23,7 @@ var config = {
             hidden: false,
             title: 'Introduction',
             //image: 'images/Water1-superJumbo.jpg',
-            description: 'This research is Mr. Simms’ escape route based on <a href="http://tompkins.nygenweb.net/tsimm.htm">Arthur Charles Howland’s interview with William Simms.</a> The transcript is the primary resource for estimating the route. This estimated route is conducted by using Google Earths and Navigation based on the content of the transcript. It is necessary to use the navigation function to roughly estimate the travel time between several essential locations, thereby inferring the rationality of its itinerary and the exact segment points of each day. The locations of segments are Chestnut Hill, Point of Rocks, Chambersburg, Carlisle, Wilkes-Barre, Archbald, Montrose, Binghamton, and Ithaca. The estimated navigation illustrates the geographic details of each segment, such as travel lengths, road names, terrains, and elevation changes. Then the estimated route could visualize the journey and further lead to the conjecture.',
+            description: 'This research is Mr. Simms’ escape route based on <a href="http://tompkins.nygenweb.net/tsimm.htm">Arthur Charles Howland’s interview with William Simms.</a> The transcript is the primary resource for estimating the route. This estimated route is conducted by using Google Earths and Navigation based on the content of the transcript. It is necessary to use the navigation function to roughly estimate the travel time between several essential locations, thereby inferring the rationality of its itinerary and the exact segment points of each day. The locations of segments were Chestnut Hill, Point of Rocks, Chambersburg, Carlisle, Wilkes-Barre, Archbald, Montrose, Binghamton, and Ithaca. The estimated navigation illustrates the geographic details of each segment, such as travel lengths, road names, terrains, and elevation changes. Then the estimated route could visualize the journey and further lead to the conjecture.',
             location: {
                 center: [ -76.85630382708514, 41.14180696407619],
 zoom: 6.35,
@@ -29,7 +32,9 @@ bearing: 0.00
             },
             mapAnimation: 'flyTo',
             rotateAnimation: true,
-            callback: '',
+            callback:() => {
+                document.getElementById("latin_index").style.visibility = "visible";
+            },
             onChapterEnter: [
             
                     {
@@ -68,7 +73,9 @@ bearing: 0.00,
                         },
             mapAnimation: 'flyTo',
             rotateAnimation: true,
-            callback: '',
+             callback:() => {
+                document.getElementById("latin_index").style.visibility = "visible";
+            },
             onChapterEnter: [    
                     {
                      layer: 'pluto-hous-type',
