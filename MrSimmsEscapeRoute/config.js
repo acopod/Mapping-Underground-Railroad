@@ -8,7 +8,7 @@ var config = {
     //https://docs.mapbox.com/mapbox-gl-js/example/projections/
     inset: false,
     theme: 'light',
-    use3dTerrain: true, //set true for enabling 3D maps.
+    use3dTerrain: false, //set true for enabling 3D maps.
     title: 'William Simms’ Route to Freedom',
     subtitle1: 'The Map of William Simms’ Journey',
     subtitle2: 'Designer: Tung Chen',
@@ -17,38 +17,48 @@ var config = {
     //byline: 'Map designer: ',
     footer: '<br> Created using <a href="https://github.com/mapbox/storytelling" target="_blank">Mapbox Storytelling</a> template.',
     chapters: [
+
             {
             id: 'slug-style-id',
             alignment: 'left',
             hidden: false,
             title: 'Introduction',
-            //image: 'images/Water1-superJumbo.jpg',
+            image1: 'images/legend.jpg',
+            image2: 'images/legend2.jpg',
+            image3: 'images/legend3.jpg',
+            image4: 'images/legend4.jpg',
+            image6: 'images/legend5.jpg',
+            image5: 'images/legend6.jpg',
+
             description: 'This research is Mr. Simms’ escape route based on <a href="http://tompkins.nygenweb.net/tsimm.htm">Arthur Charles Howland’s interview with William Simms.</a> The transcript is the primary resource for estimating the route. This estimated route is conducted by using Google Earths and Navigation based on the content of the transcript. It is necessary to use the navigation function to roughly estimate the travel time between several essential locations, thereby inferring the rationality of its itinerary and the exact segment points of each day. The locations of segments were Chestnut Hill, Point of Rocks, Chambersburg, Carlisle, Wilkes-Barre, Archbald, Montrose, Binghamton, and Ithaca. The estimated navigation illustrates the geographic details of each segment, such as travel lengths, road names, terrains, and elevation changes. Then the estimated route could visualize the journey and further lead to the conjecture.',
+            description1: 'Test',
+            description2: 'Test',
+            description3: 'Test',
+            description4: 'Test',
+            description5: 'Test',
+            description6: 'Test',
             location: {
                 center: [ -76.85630382708514, 41.14180696407619],
-zoom: 6.35,
-pitch: 0.00,
-bearing: 0.00
+                zoom: 6.35,
+                pitch: 0.00,
+                bearing: 0.00
             },
             mapAnimation: 'flyTo',
-            rotateAnimation: true,
-            callback:() => {
-                document.getElementById("latin_index").style.visibility = "visible";
-            },
+            rotateAnimation: false,
             onChapterEnter: [
             
-                    {
-                     layer: 'pluto-hous-type',
-                     opacity: 0,
-                     duration: 5000 
-                    }
+                  
             ],
             onChapterExit: [
                 // {
                 //     layer: 'layer-name',
                 //     opacity: 0
                 // }
-            ]
+            ],
+
+callback:() => {
+                document.getElementById("refugees_legend").style.visibility = "hidden";
+            },
         },
         {
             id: 'second-identifier',
@@ -57,6 +67,7 @@ bearing: 0.00
             title: 'Chestnut Hill',
             image: 'images/ChestnutHill.jpg',
             description: 'Three farms - <a href="http://www.novahistory.org/Chestnut_Hill.htm">Chestnut Hill</a>, Eagles’ Rest just below this, and a third farm near Alexandria, VA. The owner was Mrs. MASON (she was a PRICE). These farms formerly owned by an Englishman named CHAPHAM, who was humane, believed in treating slaves like men. Didn’t whip, etc. On this account the slaves on the Chestnut Hill farm would talk back at the overseer and wouldn’t submit quietly to being ill-treated. When CHAPHAM died, he left the three farms and the slaves to a distant relative, Mrs. MASON, who lived in Alexandria and whose husband was a lawyer there. The three farms were looked after by an overseer. The slaves of Chestnut Hill, when whipped by the overseer, would fight back and sometimes whip the overseer. “Very troublesome.” The slaves wouldn’t submit to harshness, having had a taste of good treatment under CHAPHAM’s mild rule. Many of the slaves at Chestnut Hill had already run away so that only seven were finally left on the farm, and man slaves were brought up from Eagle’s Rest at various times to help work the upper farm. During the winter of 1857-8, the overseer was overheard by an Englishman to say that he would well of “that breed o’dogs” down South when he got through with the spring’s work. The Englishman reported this to the slaves. So the seven Chestnut Hill negros made up their minds to run away to Canada. It was the custom in those parts to grant the slaves Easter Sunday and Easter Monday as holidays. Since the time SIMMS could remember they had also been given the next day, Tuesday, as a holiday. But in 1856 the overseer, in announcing, according to custom, on the Saturday before Easter, the work of the coming week, ordered the slaves to go back to work on Tuesday. Instead of appearing on that morning, however, they waited until the next day, Wednesday, before reporting for work. But the next year, 1857, they came back on Tuesday according to orders. “That breed of dogs,” as the overseer called the seven slaves on the Chestnut Hill farm (of whom SIMMS, about 20 years old was the youngest) decided however, to run away when the next Easter holiday came around.',
+            
             location: {
                     center: [-77.53852, 39.24846],
 zoom: 16.47,
@@ -73,15 +84,11 @@ bearing: 0.00,
                         },
             mapAnimation: 'flyTo',
             rotateAnimation: true,
-             callback:() => {
-                document.getElementById("latin_index").style.visibility = "visible";
+callback:() => {
+                document.getElementById("refugees_legend").style.visibility = "visible";
             },
             onChapterEnter: [    
-                    {
-                     layer: 'pluto-hous-type',
-                     opacity: 1,
-                     duration: 5000
-                    }
+                   
                  ],
             onChapterExit: []
         },
@@ -93,28 +100,18 @@ bearing: 0.00,
             //image: 'images/ChestnutHill.jpg',
             description: 'Between April 5th and April 7th, 1858, the journey continued from Points of Rock to the border of Pennsylvania, then passthrough Chambersburg.',
             location: {
-center: [-77.53585, 39.27480],
-zoom: 15,
-pitch: 60.00,
-bearing: 0.00,
+            center: [-77.53585, 39.27480],
+            zoom: 15,
+            pitch: 60.00,
+            bearing: 0.00,
                     speed: 0.3,
                     curve: 1,
-                // flyTo additional controls-
-                // These options control the flight curve, making it move
-                // slowly and zoom out almost completely before starting
-                // to pan.
-                //speed: 2, // make the flying slow
-                //curve: 1, // change the speed at which it zooms out
                         },
             mapAnimation: 'flyTo',
+            
             rotateAnimation: true,
-            callback: '',
             onChapterEnter: [    
-                    {
-                     layer: 'pluto-hous-type',
-                     opacity: 1,
-                     duration: 5000
-                    }
+                    
                  ],
             onChapterExit: []
         },
@@ -135,7 +132,9 @@ bearing: 0.00,
             },
             mapAnimation: 'flyTo',
             rotateAnimation: true,
-            callback: '',
+            callback:() => {
+                document.getElementById("refugees_legend").style.visibility = "visible";
+            },
             onChapterEnter: [],
             onChapterExit: []
         },
@@ -156,7 +155,7 @@ bearing: 0.00,
             },
             mapAnimation: 'flyTo',
             rotateAnimation: true,
-            callback: '',
+            
             onChapterEnter: [],
             onChapterExit: []
         },
@@ -392,7 +391,7 @@ speed: 0.5,
             hidden: false,
             title: 'from Wilkes-Barre to Montrose',
             image: 'images/from Wilkes-Barre to Montrose.png',
-            description: 'The first route is the shortest route that goes through Tunkhannock, Lemon, Avery, Springville, and Dimock. None of these locations has a similar pronunciation to Abington or Avondale, which are the suggested stop in the transcript. But obviously, it is the most energy-saving route, and it only takes 15hr 43min to complete. The second route is the relatively long and energy-consuming route. The trip continues along the northwest, reaching Archbald and heading up the mountain road, passing Clarks Summit, Nicholson, and Hop Bottom along the way. The estimated walking time is 21hr 4min. However, the key to this route is the pronunciation of Archbald could be misleading. This may not be a highly feasible conjecture, but it also provides another perspective on this journey.',
+            description: 'The first route, which is the dark gray soild line, is the shortest route that goes through Tunkhannock, Lemon, Avery, Springville, and Dimock. None of these locations has a similar pronunciation to Abington or Avondale, which are the suggested stop in the transcript. But obviously, it is the most energy-saving route, and it only takes 15hr 43min to complete. The second route, which is the dark gray dashed line, is the relatively long and energy-consuming route. The trip continues along the northwest, reaching Archbald and heading up the mountain road, passing Clarks Summit, Nicholson, and Hop Bottom along the way. The estimated walking time is 21hr 4min. However, the key to this route is the pronunciation of Archbald could be misleading. This may not be a highly feasible conjecture, but it also provides another perspective on this journey.',
             location: {
 center: [-75.946468, 41.538235],
 zoom: 9,
@@ -415,7 +414,7 @@ speed: 0.5,
             hidden: false,
             title: 'Montrose',
             //image: 'images/source.png',
-            description: 'The final leg of the journey is from Montrose to Binghamton, with a short stop before heading to Ithaca. The walking time from Montrose to Binghamton is about 7hr 31min.',
+            description: 'The final leg of the journey is from Montrose to Binghamton, with a short stop before heading to Ithaca. The walking time from Montrose to Binghamton is about 7hr 31min. Mr. Simms spent two weeks at Montrose, signifying both an opportunity for rest and the suggestion of a safer environment.',
             location: {
 center: [-75.87886, 41.83541],
 zoom: 14,
@@ -462,7 +461,7 @@ speed: 0.5,
             hidden: false,
             title: 'Binghamton',
             //image: 'images/source.png',
-            description: 'The walking time from Binghamton to Ithaca is about 14hr 59min. Because of the two-week stay in Montrose, Mr. Simms can relatively get some rest. And this part could also be seen as a safer section of the journey if he could move not only on foot but other transportation.',
+            description: 'The walking time from Binghamton to Ithaca is about 14hr 59min. Due to the planned two-week stay in Montrose, Mr. Simms will have the opportunity to get some well-deserved rest. Additionally, this portion of the journey could be considered safer if he utilizes various modes of transportation instead of just walking.',
             location: {
 center: [-75.91424, 42.09846],
 zoom: 14,

@@ -107,6 +107,83 @@ config.chapters.forEach((record, idx) => {
         chapter.appendChild(story);
     }
 
+    if (record.image1) {
+        var image1 = new Image();
+        image1.src = record.image1;
+        chapter.appendChild(image1);
+    }
+
+    if (record.description1) {
+        var story1 = document.createElement('p');
+        story1.innerHTML = record.description1;
+        chapter.appendChild(story1);
+    }
+
+
+
+
+
+    if (record.image2) {
+        var image2 = new Image();
+        image2.src = record.image2;
+        chapter.appendChild(image2);
+    }
+
+    if (record.description2) {
+        var story2 = document.createElement('p');
+        story2.innerHTML = record.description2;
+        chapter.appendChild(story2);
+    }
+
+    if (record.image3) {
+        var image3 = new Image();
+        image3.src = record.image3;
+        chapter.appendChild(image3);
+    }
+
+    if (record.description3) {
+        var story3 = document.createElement('p');
+        story3.innerHTML = record.description3;
+        chapter.appendChild(story3);
+    }
+
+
+    if (record.image4) {
+        var image4 = new Image();
+        image4.src = record.image4;
+        chapter.appendChild(image4);
+    }
+
+    if (record.description4) {
+        var story4 = document.createElement('p');
+        story4.innerHTML = record.description4;
+        chapter.appendChild(story4);
+    }
+
+    if (record.image5) {
+        var image5 = new Image();
+        image5.src = record.image5;
+        chapter.appendChild(image5);
+    }
+
+    if (record.description5) {
+        var story5 = document.createElement('p');
+        story5.innerHTML = record.description5;
+        chapter.appendChild(story5);
+    }
+
+    if (record.image6) {
+        var image6 = new Image();
+        image6.src = record.image6;
+        chapter.appendChild(image6);
+    }
+
+    if (record.description6) {
+        var story6 = document.createElement('p');
+        story6.innerHTML = record.description6;
+        chapter.appendChild(story6);
+    }
+
     container.setAttribute('id', record.id);
     container.classList.add('step');
     if (idx === 0) {
@@ -241,8 +318,8 @@ map.on("load", function() {
         if (chapter.onChapterEnter.length > 0) {
             chapter.onChapterEnter.forEach(setLayerOpacity);
         }
-        if (chapter.callback) {
-            window[chapter.callback]();
+           if (chapter.callback) {
+            chapter.callback();
         }
         if (chapter.rotateAnimation) {
             map.once('moveend', () => {
@@ -350,10 +427,33 @@ function updateInsetLayer(bounds) {
 // setup resize event
 window.addEventListener('resize', scroller.resize);
 
-map.on('zoomend', function() {
-  
-  var zoom = map.getZoom();
-  if(zoom < 10){
-      map.setStyle("mapbox://styles/acopod/cl9ugor6c002314qj6d9nxamy");
-  }
+const popup = new mapboxgl.Popup({
+closeButton: false,
+closeOnClick: false
 });
+ 
+map.on('mouseenter', 'places', (e) => {
+// Change the cursor style as a UI indicator.
+map.getCanvas().style.cursor = 'pointer';
+ 
+// Copy coordinates array.
+const coordinates = q;
+const description = w;
+ 
+// Ensure that if the map is zoomed out such that multiple
+// copies of the feature are visible, the popup appears
+// over the copy being pointed to.
+while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+}
+ 
+// Populate the popup and set its coordinates
+// based on the feature found.
+popup.setLngLat(coordinates).setHTML(description).addTo(map);
+});
+ 
+map.on('mouseleave', 'places', () => {
+map.getCanvas().style.cursor = '';
+popup.remove();
+});
+
