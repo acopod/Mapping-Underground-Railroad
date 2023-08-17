@@ -31,12 +31,12 @@ var config = {
             image5: 'images/legend6.jpg',
 
             description: 'This research is Mr. Simms’ escape route based on <a href="http://tompkins.nygenweb.net/tsimm.htm">Arthur Charles Howland’s interview with William Simms.</a> The transcript is the primary resource for estimating the route. This estimated route is conducted by using Google Earths and Navigation based on the content of the transcript. It is necessary to use the navigation function to roughly estimate the travel time between several essential locations, thereby inferring the rationality of its itinerary and the exact segment points of each day. The locations of segments were Chestnut Hill, Point of Rocks, Chambersburg, Carlisle, Wilkes-Barre, Archbald, Montrose, Binghamton, and Ithaca. The estimated navigation illustrates the geographic details of each segment, such as travel lengths, road names, terrains, and elevation changes. Then the estimated route could visualize the journey and further lead to the conjecture.',
-            description1: 'Test',
-            description2: 'Test',
-            description3: 'Test',
-            description4: 'Test',
-            description5: 'Test',
-            description6: 'Test',
+            description1: 'The main route indicates the most probable route based on deductions from the transcript.',
+            description2: 'The secondary route indicates a less probable route based on deductions from the transcript.',
+            //description3: 'Optional routes indicate the possibility that the current road network might differ from the past. These optional routes highlight nearby trails, providing an imaginative alternative for the journey.',
+            description4: 'Optional routes indicate the possibility that the current road network might differ from the past. These optional routes highlight nearby trails, providing an imaginative alternative for the journey.',
+            description5: 'Speculative connections arise from the fact that the optional routes tend to be distant from the main stops. Mr. Simms might choose to travel this route to reach the town for a stay, and then return to the optional routes after resting.',
+            description6: 'Main stops are the places mentioned in the transcript.',
             location: {
                 center: [ -76.85630382708514, 41.14180696407619],
                 zoom: 6.35,
@@ -108,7 +108,9 @@ callback:() => {
                     curve: 1,
                         },
             mapAnimation: 'flyTo',
-            
+            callback:() => {
+                document.getElementById("refugees_legend").style.visibility = "visible";
+            },
             rotateAnimation: true,
             onChapterEnter: [    
                     
@@ -163,6 +165,9 @@ bearing: 0.00,
             id: 'fourth-chapter',
             alignment: 'left',
             hidden: false,
+            callback:() => {
+                document.getElementById("refugees_legend").style.visibility = "visible";
+            },
             title: 'from Chambersburg to Carlisle',
             image: 'images/from Chambersburg to Carlisle.png',
             //description: 'Copy these sections to add to your story.',
@@ -176,7 +181,9 @@ speed: 0.5,
             },
             mapAnimation: 'flyTo',
             rotateAnimation: true,
-            callback: '',
+            callback:() => {
+                document.getElementById("refugees_legend").style.visibility = "visible";
+            },
             onChapterEnter: [],
             onChapterExit: []
         },
@@ -184,6 +191,7 @@ speed: 0.5,
             id: 'fourth-chapter-1',
             alignment: 'right',
             hidden: false,
+            
             title: 'Carlisle',
             //image: 'images/source.png',
             description: 'At this point, the journey diverged into several segments, with Mr. Simms heading to Harrisburg. The next trip is from Carlisle to Harrisburg. ',
@@ -197,7 +205,9 @@ speed: 0.5,
             },
             mapAnimation: 'flyTo',
             rotateAnimation: true,
-            callback: '',
+            callback:() => {
+                document.getElementById("refugees_legend").style.visibility = "visible";
+            },
             onChapterEnter: [],
             onChapterExit: []
         },
@@ -207,6 +217,7 @@ speed: 0.5,
             alignment: 'left',
             hidden: false,
             title: 'from Carlisle to Harrisburg',
+            
             image: 'images/from Carlisle to Harrisburg.png',
             description: 'The estimated walking time is 6hr 27min. The route mainly followed Pennsylvania Route 641 and Market St. It is worth noting that this is the second river crossing on the entire trip, and the river is the Susquehanna River.',
             location: {
@@ -220,7 +231,9 @@ speed: 0.3,
             },
             mapAnimation: 'flyTo',
             rotateAnimation: true,
-            callback: '',
+            callback:() => {
+                document.getElementById("refugees_legend").style.visibility = "visible";
+            },
             onChapterEnter: [],
             onChapterExit: []
         },
@@ -230,6 +243,7 @@ speed: 0.3,
             id: 'fifth-chapter-1',
             alignment: 'right',
             hidden: false,
+            
             title: 'Harrisburg',
             //image: 'images/source.png',
             description: 'Also, at this time, the journey changed from land to water. They followed the Susquehanna River to go north, which is more difficult to calculate the traveling time.',
@@ -244,7 +258,9 @@ speed: 0.3,
             },
             mapAnimation: 'flyTo',
             rotateAnimation: true,
-            callback: '',
+           callback:() => {
+                document.getElementById("refugees_legend").style.visibility = "visible";
+            },
             onChapterEnter: [],
             onChapterExit: []
         },
@@ -252,6 +268,7 @@ speed: 0.3,
             id: 'sixth-chapter',
             alignment: 'left',
             hidden: false,
+           
             title: 'from Harrisburg to Millersburg',
             //image: 'images/source.png',
             description: 'But the likely landing site is Millersburg, as a major arterial road connects the town to their next destination, Pottsville.',
@@ -265,7 +282,9 @@ speed: 0.5,
             },
                         mapAnimation: 'flyTo',
             rotateAnimation: true,
-            callback: '',
+            callback:() => {
+                document.getElementById("refugees_legend").style.visibility = "visible";
+            },
             onChapterEnter: [],
             onChapterExit: []
         },
@@ -274,6 +293,7 @@ speed: 0.5,
             id: 'sixth-chapter-1',
             alignment: 'right',
             hidden: false,
+
             title: 'Millersburg',
             //image: 'images/source.png',
             description: 'The journey from Millersburg to Pottsville takes 14hr 39min by walking. The migration went approximately through U.S. Route 25 and 209. ',
@@ -288,7 +308,9 @@ speed: 0.5,
             },
             mapAnimation: 'flyTo',
             rotateAnimation: true,
-            callback: '',
+            callback:() => {
+                document.getElementById("refugees_legend").style.visibility = "visible";
+            },
             onChapterEnter: [],
             onChapterExit: []
         },
@@ -310,7 +332,9 @@ speed: 0.5,
             },
             mapAnimation: 'flyTo',
             rotateAnimation: true,
-            callback: '',
+            callback:() => {
+                document.getElementById("refugees_legend").style.visibility = "visible";
+            },
             onChapterEnter: [],
             onChapterExit: []
         },
@@ -333,7 +357,9 @@ speed: 0.5,
             },
             mapAnimation: 'flyTo',
             rotateAnimation: true,
-            callback: '',
+            callback:() => {
+                document.getElementById("refugees_legend").style.visibility = "visible";
+            },
             onChapterEnter: [],
             onChapterExit: []
         },
@@ -356,7 +382,9 @@ speed: 0.5,
             },
             mapAnimation: 'flyTo',
             rotateAnimation: true,
-            callback: '',
+            callback:() => {
+                document.getElementById("refugees_legend").style.visibility = "visible";
+            },
             onChapterEnter: [],
             onChapterExit: []
         },
@@ -380,7 +408,9 @@ speed: 0.5,
             },
             mapAnimation: 'flyTo',
             rotateAnimation: true,
-            callback: '',
+            callback:() => {
+                document.getElementById("refugees_legend").style.visibility = "visible";
+            },
             onChapterEnter: [],
             onChapterExit: []
         },
@@ -403,7 +433,9 @@ speed: 0.5,
             },
             mapAnimation: 'flyTo',
             rotateAnimation: true,
-            callback: '',
+            callback:() => {
+                document.getElementById("refugees_legend").style.visibility = "visible";
+            },
             onChapterEnter: [],
             onChapterExit: []
         },
@@ -426,7 +458,9 @@ speed: 0.5,
             },
             mapAnimation: 'flyTo',
             rotateAnimation: true,
-            callback: '',
+            callback:() => {
+                document.getElementById("refugees_legend").style.visibility = "visible";
+            },
             onChapterEnter: [],
             onChapterExit: []
         },
@@ -449,7 +483,9 @@ speed: 0.5,
             },
             mapAnimation: 'flyTo',
             rotateAnimation: true,
-            callback: '',
+            callback:() => {
+                document.getElementById("refugees_legend").style.visibility = "visible";
+            },
             onChapterEnter: [],
             onChapterExit: []
         },
@@ -473,7 +509,9 @@ speed: 0.5,
             },
             mapAnimation: 'flyTo',
             rotateAnimation: true,
-            callback: '',
+            callback:() => {
+                document.getElementById("refugees_legend").style.visibility = "visible";
+            },
             onChapterEnter: [],
             onChapterExit: []
         },
@@ -495,7 +533,9 @@ speed: 0.5,
             },
             mapAnimation: 'flyTo',
             rotateAnimation: true,
-            callback: '',
+            callback:() => {
+                document.getElementById("refugees_legend").style.visibility = "visible";
+            },
             onChapterEnter: [],
             onChapterExit: []
         },
@@ -519,7 +559,9 @@ speed: 0.5,
             },
             mapAnimation: 'flyTo',
             rotateAnimation: true,
-            callback: '',
+            callback:() => {
+                document.getElementById("refugees_legend").style.visibility = "visible";
+            },
             onChapterEnter: [],
             onChapterExit: []
         },
