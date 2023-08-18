@@ -15,7 +15,7 @@ var config = {
     subtitle3: 'Assistant Designers: Halle Mae Livermore and Alycia Basquiat',
 
     //byline: 'Map designer: ',
-    footer: '<br> Created using <a href="https://github.com/mapbox/storytelling" target="_blank">Mapbox Storytelling</a> template.',
+    footer: '',
     chapters: [
 
             {
