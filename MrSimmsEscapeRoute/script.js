@@ -107,12 +107,6 @@ config.chapters.forEach((record, idx) => {
         chapter.appendChild(story);
     }
 
-    if (record.image1) {
-        var image1 = new Image();
-        image1.src = record.image1;
-        chapter.appendChild(image1);
-    }
-
     if (record.description1) {
         var story1 = document.createElement('p');
         story1.innerHTML = record.description1;
@@ -120,7 +114,18 @@ config.chapters.forEach((record, idx) => {
     }
 
 
+    if (record.image1) {
+        var image1 = new Image();
+        image1.src = record.image1;
+        chapter.appendChild(image1);
+    }
 
+
+if (record.description2) {
+        var story2 = document.createElement('p');
+        story2.innerHTML = record.description2;
+        chapter.appendChild(story2);
+    }
 
 
     if (record.image2) {
@@ -129,60 +134,57 @@ config.chapters.forEach((record, idx) => {
         chapter.appendChild(image2);
     }
 
-    if (record.description2) {
-        var story2 = document.createElement('p');
-        story2.innerHTML = record.description2;
-        chapter.appendChild(story2);
+    
+if (record.description3) {
+        var story3 = document.createElement('p');
+        story3.innerHTML = record.description3;
+        chapter.appendChild(story3);
     }
-
     if (record.image3) {
         var image3 = new Image();
         image3.src = record.image3;
         chapter.appendChild(image3);
     }
 
-    if (record.description3) {
-        var story3 = document.createElement('p');
-        story3.innerHTML = record.description3;
-        chapter.appendChild(story3);
-    }
-
+    
+    
 
     if (record.image4) {
         var image4 = new Image();
         image4.src = record.image4;
         chapter.appendChild(image4);
     }
-
-    if (record.description4) {
+if (record.description4) {
         var story4 = document.createElement('p');
         story4.innerHTML = record.description4;
         chapter.appendChild(story4);
     }
 
+  
     if (record.image5) {
         var image5 = new Image();
         image5.src = record.image5;
         chapter.appendChild(image5);
     }
-
-    if (record.description5) {
+      if (record.description5) {
         var story5 = document.createElement('p');
         story5.innerHTML = record.description5;
         chapter.appendChild(story5);
     }
 
+
+    
     if (record.image6) {
         var image6 = new Image();
         image6.src = record.image6;
         chapter.appendChild(image6);
     }
-
-    if (record.description6) {
+if (record.description6) {
         var story6 = document.createElement('p');
         story6.innerHTML = record.description6;
         chapter.appendChild(story6);
     }
+
 
     container.setAttribute('id', record.id);
     container.classList.add('step');
