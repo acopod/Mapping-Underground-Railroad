@@ -81,7 +81,7 @@
             width: 100%;
             position: relative;
             z-index: 5;
-            background-image: url("images/IMG_4517.jpeg");
+            background-image: url("images/IMG_4517.png");
             background-position: center;
             background-repeat: no-repeat;
             background-size: 30.5vw 80vh;
@@ -103,8 +103,8 @@
             font-family: 'Roboto Condensed', sans-serif;
             text-align: center;
             font-size: 7.5vh;
-            color: orange;
-            -webkit-text-stroke: 0.7px black;
+            color: white;
+            -webkit-text-stroke: 0.9px black;
 
             padding-top: 40vh;
         }
@@ -117,7 +117,7 @@
             padding: 1vh 1vw;
             text-align: center;
             font-size: 3.5vh;
-            color: orange;
+            color: white;
             padding-bottom:5vh;
             font-family: 'Roboto Condensed', sans-serif;
             -webkit-text-stroke: 0.5px black;
