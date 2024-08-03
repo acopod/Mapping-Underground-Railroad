@@ -17,12 +17,48 @@ var config = {
     //byline: 'Map designer: ',
     footer: '',
     chapters: [
+            {
+            id: 'slug-style-id',
+            alignment: 'center',
+            hidden: false,
+            title: 'Introduction to William Simms’s Story',
 
+
+            description: 'Arthur C. Howland, who transcribed William Simms’s account of his journey from enslavement to freedom, was born in 1869 and grew up in South Danby, a small village thirteen miles south of Ithaca, New York.  From the time he was eleven, he and William Simms were neighbors.  After Simms obtained his freedom in 1858, he settled in Ithaca where he lived for sixteen years, working in a tannery that employed many Black residents of the town.  In 1880, Simms and his wife moved to South Danby, across a small dirt road from the Howlands, where they farmed a plot of land called the Hildrup farm for the next fifteen years.',
+            description1:'Arthur and his sister Mary Howland were frequent visitors at the Simms house.  One evening in 1884, Arthur asked William Simms to tell him the story of his journey from enslavement to freedom, twenty-six years after Mr. Simms he came to New York State.  The detailed notes he made during that conversation formed the basis of the <a href="https://tompkins.nygenweb.net/tsimm.htm"> narrative that survives</a>, telling the story of the journey Simms made with seven other men from Chestnut Hill, Virginia to upstate New York and Canada.  That narrative is now the source of Tung Chen’s remarkable online interactive map and of Simms’s <a href="https://explore.cu.yourcultureconnect.com/e/ithaca-underground-railroad-trail/william-simmss-hard-won-life-in-tompkins-county">short history</a>, both of which are housed at the <a href="https://undergroundrailroadhub.net/about/">Underground Railroad Research Hub</a>.',
+            description2: 'Arthur C. Howland was my great grandfather.  My cousin Roger Howland (who was Arthur’s grandson) gave me a copy of Mr. Simms’s narrative in the 1990s, and it was around this time that he shared it with the Tompkins County Historical Society, which posted it on its website.  I was aware — as anyone reading it would be — that the story was both special and important, but I did not appreciate how extremely unusual it was to have a document that contained such detailed information about specific routes, plans, stops, and final destinations. ',
+            description3: 'By coincidence, I happened to move to Ithaca and Cornell University many years later in the early 2000s.  In recent years, my Cornell colleague Gerard Aching has brought together students and scholars under the aegis of the Underground Railroad Research Project, and he himself for many years taught a course about the Underground Railroad in upstate New York.  When we finally had occasion to meet, I was delighted to be able to share William Simms’s narrative with Gerard, who helped me better understand the significance of this document.',
+            description4: 'Arthur C. Howland later became a professor of history at the University of Pennsylvania.  His transcription of William Simms’s story must have been one of his earliest works of historiography.  His son (my grandfather), Arthur Lloyd Howland, would become a geologist; his hand-drawn maps of South Danby allowed us to find the original location of the Hildrup farm.  I am sure that my grandfather and great-grandfather would both appreciate and be amazed at the ways Gerard and his students have made William Simms’s story accessible and available.  Only a few years ago, it would not have been possible.  I hope that visitors to the site will take time both to explore the maps that allow us to imagine the journey Simms and his fellow freedom seekers made, and to read my great-grandfather’s transcription of the story, which is the closest thing we have to the words William Simms used to describe his experience.',
+            description5: 'Jeremy Braddock',
+
+            location: {
+                center: [ -76.85630382708514, 41.14180696407619],
+                zoom: 6.35,
+                pitch: 0.00,
+                bearing: 0.00
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            onChapterEnter: [
+            
+                  
+            ],
+            onChapterExit: [
+                // {
+                //     layer: 'layer-name',
+                //     opacity: 0
+                // }
+            ],
+
+callback:() => {
+                document.getElementById("refugees_legend").style.visibility = "hidden";
+            },
+        },
             {
             id: 'slug-style-id',
             alignment: 'left',
             hidden: false,
-            title: 'Introduction',
+            title: 'Introduction to the Interactive Map',
             image1: 'images/legend.jpg',
             image2: 'images/legend2.jpg',
             image3: 'images/legend3.jpg',
