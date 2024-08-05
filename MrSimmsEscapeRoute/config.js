@@ -50,12 +50,17 @@ var config = {
                 // }
             ],
 
-callback:() => {
-                document.getElementById("refugees_legend").style.visibility = "hidden";
-            },
+callback: function() {
+                    const legend = document.getElementById('refugees_legend');
+                    if (this.showLegend) {
+                        legend.classList.remove('hidden');
+                    } else {
+                        legend.classList.add('hidden');
+                    }
+                },
         },
             {
-            id: 'slug-style-id',
+            id: 'slug-style-id-1',
             alignment: 'left',
             hidden: false,
             title: 'Introduction to the Interactive Map',
@@ -94,7 +99,7 @@ callback:() => {
             ],
 
 callback:() => {
-                document.getElementById("refugees_legend").style.visibility = "hidden";
+                document.getElementById("refugees_legend").style.visibility = "visible";
             },
         },
         {

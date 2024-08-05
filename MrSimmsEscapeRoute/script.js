@@ -16,6 +16,16 @@ var alignments = {
     'full': 'fully'
 }
 
+function toggleLegend() {
+            var legend = document.getElementById('refugees_legend');
+            if (legend.classList.contains('hidden')) {
+                legend.classList.remove('hidden');
+            } else {
+                legend.classList.add('hidden');
+            }
+        }
+
+
 function getLayerPaintType(layer) {
     var layerType = map.getLayer(layer).type;
     return layerTypes[layerType];
