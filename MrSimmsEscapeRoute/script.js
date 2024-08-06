@@ -17,13 +17,24 @@ var alignments = {
 }
 
 function toggleLegend() {
-            var legend = document.getElementById('refugees_legend');
-            if (legend.classList.contains('hidden')) {
-                legend.classList.remove('hidden');
-            } else {
-                legend.classList.add('hidden');
-            }
+    var legend = document.getElementById('refugees_legend');
+    if (legend.classList.contains('visible')) {
+        legend.classList.remove('visible');
+    } else {
+        legend.classList.add('visible');
+    }
+}
+
+function toggleStepOpacity() {
+    var stepElements = document.querySelectorAll('.step');
+    stepElements.forEach(function(step) {
+        if (step.classList.contains('hidden1')) {
+            step.classList.remove('hidden1');
+        } else {
+            step.classList.add('hidden1');
         }
+    });
+}
 
 
 function getLayerPaintType(layer) {

@@ -32,7 +32,7 @@ var config = {
             description5: 'Jeremy Braddock',
 
             location: {
-                center: [ -76.85630382708514, 41.14180696407619],
+                center: [ -76.65630382708514, 40.94180696407619],
                 zoom: 6.35,
                 pitch: 0.00,
                 bearing: 0.00
@@ -51,17 +51,14 @@ var config = {
             ],
 
 callback: function() {
-                    const legend = document.getElementById('refugees_legend');
-                    if (this.showLegend) {
-                        legend.classList.remove('hidden');
-                    } else {
-                        legend.classList.add('hidden');
-                    }
+                    const legend = document.getElementById("refugees_legend").classList.remove("visible");
+                    document.getElementById("button1").classList.remove("visible");
+                    document.getElementById("button2").classList.remove("visible");
                 },
         },
             {
             id: 'slug-style-id-1',
-            alignment: 'left',
+            alignment: 'right',
             hidden: false,
             title: 'Introduction to the Interactive Map',
             image1: 'images/legend.jpg',
@@ -80,7 +77,7 @@ callback: function() {
             description5: 'Speculative connections arise from the fact that the optional routes tend to be distant from the main stops. Mr. Simms might choose to travel this route to reach the town for a stay, and then return to the optional routes after resting.',
             description6: 'Main stops are the places mentioned in the transcript.',
             location: {
-                center: [ -76.85630382708514, 41.14180696407619],
+                center: [ -76.65630382708514, 40.94180696407619],
                 zoom: 6.35,
                 pitch: 0.00,
                 bearing: 0.00
@@ -98,9 +95,11 @@ callback: function() {
                 // }
             ],
 
-callback:() => {
-                document.getElementById("refugees_legend").style.visibility = "visible";
-            },
+callback: () => {
+    document.getElementById("refugees_legend").classList.add("visible");
+    document.getElementById("button1").classList.add("visible");
+    document.getElementById("button2").classList.add("visible");
+},
         },
         {
             id: 'second-identifier',
@@ -126,8 +125,10 @@ bearing: 0.00,
                         },
             mapAnimation: 'flyTo',
             rotateAnimation: true,
-callback:() => {
-                document.getElementById("refugees_legend").style.visibility = "visible";
+            callback: () => {
+                document.getElementById("refugees_legend").classList.remove("visible");
+                document.getElementById("button1").classList.add("visible");
+                document.getElementById("button2").classList.add("visible");
             },
             onChapterEnter: [    
                    
@@ -154,9 +155,10 @@ callback:() => {
                     curve: 1,
                         },
             mapAnimation: 'flyTo',
-            callback:() => {
-                document.getElementById("refugees_legend").style.visibility = "visible";
-            },
+            callback: () => {
+    document.getElementById("button1").classList.add("visible");
+    document.getElementById("button2").classList.add("visible");
+},
             rotateAnimation: true,
             onChapterEnter: [    
                     
@@ -180,9 +182,10 @@ bearing: 0.00,
             },
             mapAnimation: 'flyTo',
             rotateAnimation: true,
-            callback:() => {
-                document.getElementById("refugees_legend").style.visibility = "visible";
-            },
+            callback: () => {
+    document.getElementById("button1").classList.add("visible");
+    document.getElementById("button2").classList.add("visible");
+},
             onChapterEnter: [],
             onChapterExit: []
         },
@@ -215,9 +218,10 @@ bearing: 0.00,
             id: 'fourth-chapter',
             alignment: 'left',
             hidden: false,
-            callback:() => {
-                document.getElementById("refugees_legend").style.visibility = "visible";
-            },
+            callback: () => {
+    document.getElementById("button1").classList.add("visible");
+    document.getElementById("button2").classList.add("visible");
+},
             title: 'from Chambersburg to Carlisle',
             image: 'images/from Chambersburg to Carlisle.png',
             //description: 'Copy these sections to add to your story.',
@@ -231,9 +235,10 @@ speed: 0.5,
             },
             mapAnimation: 'flyTo',
             rotateAnimation: true,
-            callback:() => {
-                document.getElementById("refugees_legend").style.visibility = "visible";
-            },
+            callback: () => {
+    document.getElementById("button1").classList.add("visible");
+    document.getElementById("button2").classList.add("visible");
+},
             onChapterEnter: [],
             onChapterExit: []
         },
@@ -259,9 +264,10 @@ speed: 0.5,
             },
             mapAnimation: 'flyTo',
             rotateAnimation: true,
-            callback:() => {
-                document.getElementById("refugees_legend").style.visibility = "visible";
-            },
+            callback: () => {
+    document.getElementById("button1").classList.add("visible");
+    document.getElementById("button2").classList.add("visible");
+},
             onChapterEnter: [],
             onChapterExit: []
         },
@@ -285,9 +291,10 @@ speed: 0.3,
             },
             mapAnimation: 'flyTo',
             rotateAnimation: true,
-            callback:() => {
-                document.getElementById("refugees_legend").style.visibility = "visible";
-            },
+            callback: () => {
+    document.getElementById("button1").classList.add("visible");
+    document.getElementById("button2").classList.add("visible");
+},
             onChapterEnter: [],
             onChapterExit: []
         },
@@ -316,9 +323,10 @@ speed: 0.3,
             },
             mapAnimation: 'flyTo',
             rotateAnimation: true,
-           callback:() => {
-                document.getElementById("refugees_legend").style.visibility = "visible";
-            },
+           callback: () => {
+    document.getElementById("button1").classList.add("visible");
+    document.getElementById("button2").classList.add("visible");
+},
             onChapterEnter: [],
             onChapterExit: []
         },
@@ -340,9 +348,10 @@ speed: 0.5,
             },
                         mapAnimation: 'flyTo',
             rotateAnimation: true,
-            callback:() => {
-                document.getElementById("refugees_legend").style.visibility = "visible";
-            },
+            callback: () => {
+    document.getElementById("button1").classList.add("visible");
+    document.getElementById("button2").classList.add("visible");
+},
             onChapterEnter: [],
             onChapterExit: []
         },
@@ -366,9 +375,10 @@ speed: 0.5,
             },
             mapAnimation: 'flyTo',
             rotateAnimation: true,
-            callback:() => {
-                document.getElementById("refugees_legend").style.visibility = "visible";
-            },
+            callback: () => {
+    document.getElementById("button1").classList.add("visible");
+    document.getElementById("button2").classList.add("visible");
+},
             onChapterEnter: [],
             onChapterExit: []
         },
@@ -390,9 +400,10 @@ speed: 0.5,
             },
             mapAnimation: 'flyTo',
             rotateAnimation: true,
-            callback:() => {
-                document.getElementById("refugees_legend").style.visibility = "visible";
-            },
+            callback: () => {
+                document.getElementById("button1").classList.add("visible");
+    document.getElementById("button2").classList.add("visible");
+},
             onChapterEnter: [],
             onChapterExit: []
         },
@@ -415,9 +426,10 @@ speed: 0.5,
             },
             mapAnimation: 'flyTo',
             rotateAnimation: true,
-            callback:() => {
-                document.getElementById("refugees_legend").style.visibility = "visible";
-            },
+            callback: () => {
+    document.getElementById("button1").classList.add("visible");
+    document.getElementById("button2").classList.add("visible");
+},
             onChapterEnter: [],
             onChapterExit: []
         },
@@ -440,9 +452,10 @@ speed: 0.5,
             },
             mapAnimation: 'flyTo',
             rotateAnimation: true,
-            callback:() => {
-                document.getElementById("refugees_legend").style.visibility = "visible";
-            },
+            callback: () => {
+    document.getElementById("button1").classList.add("visible");
+    document.getElementById("button2").classList.add("visible");
+},
             onChapterEnter: [],
             onChapterExit: []
         },
@@ -470,9 +483,10 @@ speed: 0.5,
             },
             mapAnimation: 'flyTo',
             rotateAnimation: true,
-            callback:() => {
-                document.getElementById("refugees_legend").style.visibility = "visible";
-            },
+            callback: () => {
+    document.getElementById("button1").classList.add("visible");
+    document.getElementById("button2").classList.add("visible");
+},
             onChapterEnter: [],
             onChapterExit: []
         },
@@ -495,9 +509,10 @@ speed: 0.5,
             },
             mapAnimation: 'flyTo',
             rotateAnimation: true,
-            callback:() => {
-                document.getElementById("refugees_legend").style.visibility = "visible";
-            },
+            callback: () => {
+    document.getElementById("button1").classList.add("visible");
+    document.getElementById("button2").classList.add("visible");
+},
             onChapterEnter: [],
             onChapterExit: []
         },
@@ -523,9 +538,10 @@ speed: 0.5,
             },
             mapAnimation: 'flyTo',
             rotateAnimation: true,
-            callback:() => {
-                document.getElementById("refugees_legend").style.visibility = "visible";
-            },
+            callback: () => {
+    document.getElementById("button1").classList.add("visible");
+    document.getElementById("button2").classList.add("visible");
+},
             onChapterEnter: [],
             onChapterExit: []
         },
@@ -548,9 +564,10 @@ speed: 0.5,
             },
             mapAnimation: 'flyTo',
             rotateAnimation: true,
-            callback:() => {
-                document.getElementById("refugees_legend").style.visibility = "visible";
-            },
+            callback: () => {
+    document.getElementById("button1").classList.add("visible");
+    document.getElementById("button2").classList.add("visible");
+},
             onChapterEnter: [],
             onChapterExit: []
         },
@@ -578,9 +595,10 @@ speed: 0.5,
             },
             mapAnimation: 'flyTo',
             rotateAnimation: true,
-            callback:() => {
-                document.getElementById("refugees_legend").style.visibility = "visible";
-            },
+            callback: () => {
+    document.getElementById("button1").classList.add("visible");
+    document.getElementById("button2").classList.add("visible");
+},
             onChapterEnter: [],
             onChapterExit: []
         },
@@ -602,9 +620,10 @@ speed: 0.5,
             },
             mapAnimation: 'flyTo',
             rotateAnimation: true,
-            callback:() => {
-                document.getElementById("refugees_legend").style.visibility = "visible";
-            },
+            callback: () => {
+    document.getElementById("button1").classList.add("visible");
+    document.getElementById("button2").classList.add("visible");
+},
             onChapterEnter: [],
             onChapterExit: []
         },
@@ -630,9 +649,11 @@ speed: 0.5,
             },
             mapAnimation: 'flyTo',
             rotateAnimation: true,
-            callback:() => {
-                document.getElementById("refugees_legend").style.visibility = "visible";
-            },
+            callback: () => {
+    
+    document.getElementById("button1").classList.add("visible");
+    document.getElementById("button2").classList.add("visible");
+},
             onChapterEnter: [],
             onChapterExit: []
         },
